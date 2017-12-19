@@ -1,0 +1,115 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Better Odds</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap-grid.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet"> 
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.11/vue.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="grid" id="app">
+        <div id="top-header">
+            <h1>This book could help you shed those few pounds and maybe save your life</h1>
+            <h3>Learn the truth about sugar and how it is poisoning you</h3>
+            <img src="" alt="">
+        </div> 
+        <div id="bottom-header" class="container">
+            <div class="wrapper">
+                <div class="row">
+                    <div class="col col-sm-12 col-lg-5 imagery">
+                        <img src="./img/fat_chance_2.jpg" alt="">
+                    </div>
+                    <div class="col col-sm-12 col-lg-7 content">
+                        <h3>What is it all about?</h3>
+                        <p>Robert Lustig’s 90-minute YouTube video <a target="_blank" href="https://www.youtube.com/watch?v=dBnniua6-oM">Sugar: The Bitter Truth</a>, has been viewed more than seven million times. Now, in this much anticipated book, he documents the science and the politics that has led to the pandemic of chronic disease over the last 30 years.</p>
+                        <br>
+                        <br>
+                        <a class="button" target="_blank" href="https://www.amazon.com/Fat-Chance-Beating-Against-Processed/dp/0142180432"><b>I want to give myself better Odds</b></a>
+                    </div>        
+                </div>
+            </div>
+        </div>
+        <div id="testimonials" class="wrapper">
+            <div class="row">
+                <div class="col col-sm-12 header">
+                    <h2>What other people had to say about <span class="title-book">Fat Chance</span></h2>
+                </div>
+                <div class="col col-sm-12 col-lg-6 content" v-for="testimonial in testimonials">
+                    <div class="testimonial">
+                        <div class="testimonial-imagery">
+                            <img :src="testimonial.pic" alt="">
+                        </div>
+                        <div class="testimonial-info">
+                            <p class="quote">{{ testimonial.quote }}</p>
+                            <p class="author">{{ testimonial.author }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="authority-section">
+            <h2>About the author</h2>
+            <div class="image-round">
+                <img src="./img/rl3.png" alt="">
+            </div>
+            <p class="author">Robert H. Lustig</p>
+            <p class="subtitle">Professor of Pediatrics in the Division of Endocrinology at the University of California, San Francisco (UCSF)</p>
+            <br>
+            <p>Robert H. Lustig, M.D., MSL, is professor of pediatrics in the Division of Endocrinology and a member of the Institute for Health Policy Studies at University of California, San Francisco. He has authored 120 peer-reviewed articles and 70 reviews, as well as The Fat Chance Cookbook and the upcoming The Hacking of the American Mind. He has mentored 30 pediatric endocrine fellows and trained numerous other allied health professionals. He is the former chairman of the Obesity Task Force of the Pediatric Endocrine Society, a member of the Obesity Task Force of the Endocrine Society, and a member of the Pediatric Obesity Devices Committee of the U.S. Food and Drug Administration. He is also the president of the nonprofit Institute for Responsible Nutrition, dedicated to reversing childhood obesity and Type 2 Diabetes. He consults for several childhood obesity advocacy groups and government agencies.</p>
+        </div>                       
+        <div id="bottom-cta" class="wrapper">
+            <span class="quote-title">"This important book could finally push you to shed those extra pounds, if not save your life"</span>
+            <span class="author-title">- EVENING STANDARD</span>
+            <br>
+            <br>
+            <br>
+            <a class="button" target="_blank" href="https://www.amazon.com/Fat-Chance-Beating-Against-Processed/dp/0142180432"><b>Get the book</b></a>
+        </div>  
+    </div>
+    
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                testimonials: [
+                {
+                    pic: './img/garysquare.png',
+                    author: 'Gary Taubes, author of Good Calories, Bad Calories and Why We Get Fat',
+                    quote: 'No scientist has done more in the last fifty years to alert Americans to the potential dangers of sugar in the diet than Dr. Robert Lustig.'    
+                },
+                {
+                    pic: './img/alecsquare.png',
+                    author: 'Alec Baldwin',
+                    quote: 'Robert Lustig is neither ringing an alarm bell nor giving us a gentle, paternalistic nudge. His message is more authentic. He is a medical doctor issuing a prescription. In order to address a current cocktail of health threats, Americans must alter their diets and do so radically. Those alterations must begin with a dramatic reduction in the consumption of sugars.'    
+                },
+                {
+                    pic: './img/boydsquare.png',
+                    author: 'S. Boyd Eaton, M.D., Departments of Radiology and Anthropology, Emory University, and father of the Paleo Diet movement',
+                    quote: 'Fat Chance is an extraordinary achievement. Obesity\'s causes, mechanisms, health consequences, and preventive approaches are all devilishly complicated, but Dr. Lustig\'s outstanding contribution clarifies the complexity via a writing style that\'s accessible, insightful, and often gently humorous. Robert Lustig is a clinician, a scientist, and an advocate — a combination that that makes him uniquely qualified to bring the condition\'s many facets into sharp focus. Obesity has become the world\'s number one health problem. Fat Chance is the book for all of us who must confront this epidemic.'    
+                },
+                {
+                    pic: './img/weilsquare.png',
+                    author: 'Andrew Weil, M.D., author of Spontaneous Happiness and You Can’t Afford to Get Sick',
+                    quote: 'Our eating habits are killing us. In this timely and important book, Dr. Robert Lustig presents the scientific evidence for the toxicity of sugar and the disastrous effects of modern industrial food on the hormones that control hunger, satiety, and weight. He gives recommendations for a personal solution to the problem we face and also suggests a public policy solution. Fat Chance is the best book I\'ve read on the relationship between diet and health and the clearest explanation of epidemic obesity in our society.'    
+                }                    
+                ]
+            }             
+        });
+    </script>
+    
+    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+    <script>
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+</html>

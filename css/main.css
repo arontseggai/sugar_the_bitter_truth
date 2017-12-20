@@ -80,6 +80,13 @@ text-decoration: none;
     letter-spacing:  1px;
 }
 
+#bottom-header .link {
+    cursor: pointer;
+    font-weight: 800;
+    color: red;
+    text-decoration: underline;
+}
+
 #testimonials {
     padding: 40px 0;
     background-color: #F5F6F8;

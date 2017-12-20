@@ -6,6 +6,7 @@ body {
     background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
+
   p {
     font-size: 14px;
   }
@@ -199,3 +200,30 @@ text-decoration: none;
     letter-spacing: 0;
     font-weight: 200;
 }
+
+/* RESPONSIVENESS */
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {  }
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767px) { 
+    #bottom-header .content {
+        text-align: center;
+    }
+
+    #testimonials .testimonial-imagery {
+        display: none;
+    }
+
+    #bottom-header .imagery img {
+        width: 50%;
+        height: auto;
+    }
+ }
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991px) {  }
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199px) {  }

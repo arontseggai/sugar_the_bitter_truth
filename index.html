@@ -44,7 +44,6 @@
             <div id="top-header">
                 <h1>This book will save your life</h1>
                 <h3>Learn the truth about sugar and how it is poisoning you</h3>
-                <img src="" alt="">
             </div> 
             <div id="bottom-header">
                 <div class="wrapper">
@@ -58,7 +57,7 @@
                                 <p>Robert Lustig’s 90-minute YouTube video <a class="link" @click.prevent="ytClickAction">Sugar: The Bitter Truth</a>, has been viewed more than seven million times. Now, in this much anticipated book, he documents the science and the politics that has led to the pandemic of chronic disease over the last 30 years.</p>
                                 <br>
                                 <br>
-                                <a class="button" @click.prevent="topCtaClickAction"><b>Get the book</b></a>                            
+                                <a class="button" @click.prevent="topCtaClickAction">GET THE BOOK</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=betterodds1-20&l=am2&o=1&a=0142180432" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />                         
                             </div>
                         </div>        
                     </div>
@@ -102,7 +101,7 @@
                 <br>
                 <br>
                 <br>
-                <a class="button" @click.prevent="bottomCtaClickAction"><b>Get the book</b></a>
+                <a class="button" @click.prevent="topCtaClickAction">GET THE BOOK</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=betterodds1-20&l=am2&o=1&a=0142180432" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;"/>
             </div>    
         </div> 
     </div>
@@ -137,11 +136,13 @@
             methods: {
                 topCtaClickAction: function() {
                     mixpanel.track("Top CTA button clicked");
-                    window.location.href="https://www.amazon.com/Fat-Chance-Beating-Against-Processed/dp/0142180432";
+                    var win = window.open('https://www.amazon.com/gp/product/0142180432/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0142180432&linkCode=as2&tag=betterodds1-20&linkId=25dfe14de3e6720464c07e662fbd3abd', '_blank');
+                    win.focus();
                 },
                 bottomCtaClickAction: function() {
                     mixpanel.track("Bottom CTA button clicked");
-                    window.location.href="https://www.amazon.com/Fat-Chance-Beating-Against-Processed/dp/0142180432";
+                    var win = window.open('https://www.amazon.com/gp/product/0142180432/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=0142180432&linkCode=as2&tag=betterodds1-20&linkId=25dfe14de3e6720464c07e662fbd3abd', '_blank');
+                    win.focus();
                 },
                 ytClickAction: function() {
                     mixpanel.track("Youtube link clicked");
@@ -150,6 +151,7 @@
                 }
             }
         });
+
     </script>
     
     <!-- Global site tag (gtag.js) - Google Analytics -->

@@ -223,12 +223,17 @@ text-decoration: none;
     }
 
     #testimonials .testimonial-imagery {
-        display: none;
+        /* display: none; */
+        width: 40%;
+    }
+
+    #testimonials .testimonial-info {
+        width: 60%;
     }
 
     #bottom-header .imagery img {
-        width: 50%;
-        height: auto;
+        width: auto;
+        height: 380px;
     }
  }
 
